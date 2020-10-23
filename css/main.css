@@ -1,0 +1,68 @@
+body {
+    background-image: url(backog.jpg);
+    
+}
+
+ul {
+    list-style-type: none;/*this one removes bullets*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+
+}
+#nav_items li {
+    float: left;
+}
+#social_nav li {
+    float: right;
+}
+li img {
+    width: 2.5em;
+    height: 2.5em;
+    display: block;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em 1em;
+}
+li a:hover {
+    color: blue;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.introduce, .skills, .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1em;
+}
+.introduce div {
+    padding: 4em;
+}
+#cardinal {
+    width: 100%;
+    height: auto;
+    border-radius: 3em;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+.black_background {
+    background-color: black;
+    color: yellow;
+}
+.yellow_background {
+    background-color: yellow;
+    color: black;
+
+}
