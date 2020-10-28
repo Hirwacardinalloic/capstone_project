@@ -1,9 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body {
+    background-color: #5cdb95;
+    
+}
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-left: 1em;
 }
 li a, a {
 	text-decoration: none;
@@ -37,7 +47,7 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../img/backog.JPG);
+    
 }
 footer {
     display: flex;
@@ -48,32 +58,79 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    background-image: url(../img/backog.JPG);
-
 }
 
-.section2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
+
 button {
     border-radius: 45%;
     font-size: 2em;
     width: auto;
-    align-items: center;
+    align-content: center;
 }
-footer button {
-    background-color: yellow;
-    align-items: center;
-}
+
 .section3 button {
     background-color: green;
 }
-.footer {
-    background-image: url(../img/backog.JPG);
+.section1, .section3, .section4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+}
+p {
+    font-size: 1.5em;
+    color: #05386b;
+    padding: 1em;
+}
+h1 {
+    padding: 1em;
+    font-size: 2em;
+}
+footer {
+    height: 2em;
+}
+.section1 img {
+    width: auto;
+    height: auto;
+    border-radius: 10%;
+}
+@media only screen and (max-width: 780px){
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .section1, .section3, .section4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3em;
+        margin-bottom: 0.5em;
+        align-content: center;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .section1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+    }
+    button, p{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }
