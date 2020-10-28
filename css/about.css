@@ -37,6 +37,7 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background-image: url(../img/backog.JPG);
 }
 footer {
     display: flex;
@@ -49,6 +50,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    background-image: url(../img/backog.JPG);
 
 }
 
@@ -71,4 +73,7 @@ footer button {
 }
 .section3 button {
     background-color: green;
+}
+.footer {
+    background-image: url(../img/backog.JPG);
 }
