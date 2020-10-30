@@ -13,7 +13,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 8em auto 50px;
+    grid-auto-rows: auto;
     grid-template-areas: "h h h h h h h h h h h h"
                          "c c c c c c c c c c m m"
                          "f f f f f f f f f f f f";
@@ -71,7 +71,9 @@ li a:hover {
 }
 
 .footer {
+
     grid-area: f;
+    
 }
 .menu {
     
@@ -91,3 +93,4 @@ li a:hover {
     text-align: center;
     height: 5em;
 }
+
