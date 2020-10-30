@@ -1,0 +1,93 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+body {
+    background-color: #5cdb95;
+    max-width: 100%;
+    margin: 0 10px;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 8em auto 50px;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "c c c c c c c c c c m m"
+                         "f f f f f f f f f f f f";
+    
+}
+ul {
+	list-style: none;
+}
+li a {
+	text-decoration: none;
+}
+
+#logo img, .header >:nth-child(3) img {
+    margin: 1em;
+    /* float: left;
+    display: block; */
+    width: 2.5em;
+    height: 2.5em;
+    /* display: block; */
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em 1em;
+}
+li a:hover {
+    color: blue;
+}
+.header {
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid beige;
+    
+}
+.header >:nth-child(2), .header >:nth-child(3){
+    display: flex;
+}
+.header >:nth-child(3) {
+    margin-left: auto;
+}
+.content {
+    
+    grid-area: c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 20em;
+     
+}
+.mainCard {
+    grid-column: 1/-1;
+    grid-row: 1/3;
+}
+
+.footer {
+    grid-area: f;
+}
+.menu {
+    
+    grid-area: m;
+     
+}
+.menu_image img, .regularCard img {
+    width:10em;
+    height: 13em;
+}
+.content >:nth-child(1) img {
+    width: 100%;
+    height: auto;
+}
+.menu figcaption, .regularCard figcaption {
+    width: 9em;
+    text-align: center;
+    height: 5em;
+}
