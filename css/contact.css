@@ -1,41 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-body {
-    background-color: #5cdb95;
-}
-ul {
-	list-style: none;
-}
-li a {
-	text-decoration: none;
-}
-.navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-#nav_items, #social_nav{
-	display: flex;
-	flex-direction: row;
-}
-li img {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 1em;
-}
-li a:hover {
-    color: blue;
-}
+
 .form {
     width: 400px;
     height: 420px;

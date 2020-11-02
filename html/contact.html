@@ -4,25 +4,37 @@
         <title>Hirwa Loic</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/contact.css">
     </head>
     <body>
-        <div class="navbar">
-            <ul id="nav_items">
-                <li><a><img src="../img/logo.jpg"></li></a>
-                <li class="active"><a id="home" href="../index.html">Home</a></li>
-                <li class="active"><a id="about" href="about.html">About</a></li>
-                <li class="active"><a id="blog" href="blog.html">Blog</a></li>
-                <li class="active"><a id="contact" href="contact.html">Contact</a></li>
-                <li class="active"><a id="signIn" href="sign.html">sign-in</a></li>
-            </ul>
-            <ul id="social_nav">
+        <nav>
+    	
+    		<a class="logo"><img src="../img/logo.jpg"></a>
+    	
+    	<ul class="menu">
+                
+                <li class="item"><a id="home" href="../index.html">Home</a></li>
+                <li class="item"><a id="about" href="about.html">About</a></li>
+                <li class="item"><a id="blog" href="blog.html">Blog</a></li>
+                <li class="item"><a id="contact" href="#">Contact</a></li>
+                <li class="item button"><a id="signIn" href="sign.html">sign-in</a></li>
+                
+         </ul>
+        
+        <div class="social-nav">
+           <ul>
                 <li><a href="#"><img src="../img/fb.png"></a></li>
                 <li><a href="#"><img src="../img/tweeter.png"></a></li>
                 <li><a href="#"><img src="../img/in.png"></a></li>
-            </ul>
-        </div>
-        <hr>
+                <li></li>
+           </ul>
+       </div>
+         <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
+        
+    </nav>
+    <hr>
         <div class="form">
             <form>
                 <h1>Contact us</h1>
@@ -39,5 +51,6 @@
                 
             </form>
         </div>
+        <script src="../js/nav.js"></script>
     </body>
 </html>    
