@@ -5,30 +5,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/sign.css">
     </head>
     <body>
-        <div class="navbar">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../img/logo.jpg">
-                </a><h3>HIRWA Cardinal Loic</h3>
+        <nav>
+    	
+    		<a class="logo"><img src="/img/logo.jpg"></a>
+    	
+    	<ul class="menu">
                 
-            </div>
-            <ul class="nav_items">
-                <li class="active"><a id="home" href="../index.html">Home</a></li>
-                <li class="active"><a id="about" href="about.html">About</a></li>
-                <li class="active"><a id="blog" href="blog.html">Blog</a></li>
-                <li class="active"><a id="contact" href="contact.html">Contact</a></li>
-                <li class="active"><a id="signIn" href="sign.html">sign-in</a></li>
-            </ul>
-            <ul class="nav_items">
-                <li><a href="#"><img src="../img/fb.png"></a></li>
-                <li><a href="#"><img src="../img/tweeter.png"></a></li>
-                <li><a href="#"><img src="../img/in.png"></a></li>
-            </ul>
-        </div>
-        <hr>
+                <li class="item"><a id="home" href="/index.html">Home</a></li>
+                <li class="item"><a id="about" href="about.html">About</a></li>
+                <li class="item"><a id="blog" href="blog.html">Blog</a></li>
+                <li class="item"><a id="contact" href="contact.html">Contact</a></li>
+                <li class="item button"><a id="signIn" href="#">sign-in</a></li>
+                
+         </ul>
+        
+        <div class="social-nav">
+           <ul>
+                <li><a href="#"><img src="/img/fb.png"></a></li>
+                <li><a href="#"><img src="/img/tweeter.png"></a></li>
+                <li><a href="#"><img src="/img/in.png"></a></li>
+                <li></li>
+           </ul>
+       </div>
+         <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
+        
+    </nav>
+    <hr>
         <div class="form">
             <form>
                 
@@ -57,6 +63,7 @@
                 <a><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
+        <script src="/js/nav.js"></script>
         
         <footer> <small>&copy; Copyright 2020, Loic</small> </footer>
        

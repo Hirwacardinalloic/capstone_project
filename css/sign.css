@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #5cdb95;
+    /* background-color: #5cdb95; */
     
     font-family: Poppins;
 
@@ -38,14 +38,14 @@ h1 {
     height: 30px;
     font-size: 16px;
     opacity: 1;
-    color: #ccc;
+    color: #000;
 }
 .form input[type=submit] {
     border: none;
     outline: none;
     height: 40px;
     background: #f6648b;
-    color: #fff;
+    color: blue;
     font-size: 14px;
     font-weight: bold;
 
@@ -95,56 +95,11 @@ h1 {
     padding: 8px 0;
 }
 
- ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-li a, a {
-	text-decoration: none;
-}
-.logo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-li img, .logo a img {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 1em;
-}
-li a:hover {
-    color: blue;
-}
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
+ 
 
 @media only screen and (max-width: 768px){
 
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
+    
     
    
     .form {
