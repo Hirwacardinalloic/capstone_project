@@ -1,9 +1,14 @@
 
 .form {
-    width: 400px;
-    height: 420px;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     color: #000;
-    margin-left: 30%;
+    margin: auto;
     padding: 1em;
     box-sizing: border-box;
     
@@ -20,7 +25,7 @@ h1 {
     font-family: Courgette;
 }
 .form input, textarea {
-    width: 100%;
+    width: 50vh;
     margin-bottom: 20px;
 }
 .form input[type=text], .form input[type=email], textarea {
@@ -46,4 +51,14 @@ h1 {
 }
 .form input[type=submit]:hover {
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 25vh;
+    height: 8vh;
+    
 }
