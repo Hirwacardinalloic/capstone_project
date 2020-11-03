@@ -28,7 +28,7 @@ footer ul {
     justify-content: center;
 }
 
-.image img, .image img {
+.card img {
     width: 100%;
     height: auto;
 }
@@ -38,7 +38,7 @@ footer ul {
 button {
     font-size: 2em;
 }
-.box {
+.card {
     width: 30%;
     height: auto;
     margin: 1em 1em 0;
