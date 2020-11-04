@@ -1,82 +1,9 @@
-body {
-
-    width: 100%;
-    
-    
-}
-.navbar, .footer {
-    margin-left: 3%;
-    margin-right: 3%;
-    background-image: url(backog.jpg);
-    
-
-}
-ul {
-	list-style: none;
-}
-li a {
-	text-decoration: none;
-}
-.navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-#nav_items, #social_nav{
-	display: flex;
-	flex-direction: row;
-}
-li img {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 1em;
-}
-li a:hover {
-    color: blue;
-}
-/* ul {
-    
-    list-style-type: none;/*this one removes bullets*/
-    margin-left: 3em;
-    padding: 0;
-    overflow: hidden;
-    
-
-}
-#nav_items li {
-    float: left;
-}
-#social_nav li {
-    float: right;
-} */
-li img {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 1em;
-}
-li a:hover {
-    color: blue;
-}
 .flex-container {
    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(backog.jpg);
+    align-items: center;
     margin-left: 3%;
     margin-right: 3%;
      
@@ -84,15 +11,13 @@ li a:hover {
 .introduce, .skills, .projects {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 1em;
 }
-.introduce div {
-    padding: 4em;
-}
+
 #cardinal {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 3em;
 }
@@ -100,14 +25,10 @@ footer ul {
     display: flex;
     justify-content: center;
 }
-.black_background {
-    background-color: black;
-    color: yellow;
-}
-.yellow_background {
-    background-color: yellow;
-    color: black;
 
+.image img, .image img {
+    width: 100%;
+    height: auto;
 }
 .hello {
     font-size: 3em;
@@ -118,17 +39,51 @@ button {
 .box {
     width: 30%;
     height: auto;
+    margin: 1em 1em 0;
+    
+
 }
-.box1 {
-    width: 50%;
-    height: auto;
-}
-.specific {
-    padding-left: 50%;
-}
+
+
 footer ul li button {
     margin-top: 0.5em;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
+
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .introduce, .skills, .projects {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+    }
+    .hello {
+        font-size: 2em;
+    }
+    button {
+        font-size: 1em;
+    }
+
+    .image img, .image img, #cardinal{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    .box {
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+    
+    
     
 }
