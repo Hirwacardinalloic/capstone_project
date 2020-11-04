@@ -36,22 +36,50 @@
     </nav>
     <hr>
         <div class="form">
-            <form>
+            <form id="contact-us-form">
                 <h1>Contact us</h1>
                 <div>
-                    <input type="text" placeholder="Full name">
+                    <input type="text" name="fullName" placeholder="Full name">
                 </div>
                 <div>
-                    <input type="email" placeholder="email address">
+                    <input type="email" name="emailAddress" placeholder="email address">
                 </div>
                 <div>
-                    <textarea placeholder="Write your message here"></textarea>
+                    <textarea name="messageArea" placeholder="Write your message here"></textarea>
                 </div>
                 <input class="submit" type="submit" name="send" value="send">
                 
             </form>
         </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDwlNtfOWclDNGrI6frzHXKPiipcAxaQWs",
+    authDomain: "capstone-de6be.firebaseapp.com",
+    databaseURL: "https://capstone-de6be.firebaseio.com",
+    projectId: "capstone-de6be",
+    storageBucket: "capstone-de6be.appspot.com",
+    messagingSenderId: "806697156125",
+    appId: "1:806697156125:web:d089c08590d38b63cf50f4",
+    measurementId: "G-RV43JP4SCG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshot: true });
+</script>
         <script src="../js/nav.js"></script>
+        <script src="../js/app.js"></script>
         <footer> <small>&copy; Copyright 2020, Loic</small> </footer>
     </body>
 </html>    
