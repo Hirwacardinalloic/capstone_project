@@ -7,7 +7,6 @@ body {
 	font-family: sans-serif;
 	font-size: 16px;
 	/*background: #a9a9a9;*/
-    background: #cdcdcd;
     max-width: 100%;
 
 }
@@ -17,8 +16,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 15px;
-	/*background: violet;*/
-	background: #add8e6;
+	background: black;
 
 }
 .logo img, .social-nav img {
@@ -43,11 +41,19 @@ li a {
 	align-items: center;
 	order: 2;
 	width: 100%;
+	
+	color: white;
 }
 
 .menu li a {
 	display: block;
 	padding: 1em;
+	color: white;
+}
+.menu li a:hover {
+	transform: scale(1.1);
+	transition: all .1s;
+	color: yellow;
 }
 .logo {
 	order: 1;
@@ -131,3 +137,4 @@ li a {
 		display: none;
 	}
 }
+
