@@ -22,9 +22,9 @@ function renderContent(doc) {
     contentDiv.appendChild(singleBlog);
 
     readMore.addEventListener('click', () => {
-    
+        //sending the document Id from blog page to read_article page
         localStorage.setItem('article_id', doc.id);
-        window.location.href='..index.html'
+        window.location.href='read_article.html';
     });
 
 }
