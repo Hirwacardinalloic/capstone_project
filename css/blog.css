@@ -23,5 +23,55 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+.footer {
+	grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background: black;
+	color: white;
+	margin-top: 1em;
+}
 
- 
+@media all and (max-width: 768px) {
+    .wrapper {
+        display: grid;
+        grid-template-areas: "h h h h h h h h h h h h"
+                             "c c c c c c c c c c c c"
+                             "m m m m m m m m m m m m"
+                             "f f f f f f f f f f f f";
+    } 
+    .others {
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .side-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1em;
+    }
+    .cards-holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+
+}
+
+@media all and (max-width: 500px) {
+    .others {
+        
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .cards-holder {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+
+}
