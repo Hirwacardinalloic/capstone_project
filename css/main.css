@@ -14,8 +14,9 @@
 
 .introduce {
     grid-area: i;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     align-items: center;
     margin: 1em;
 }
@@ -31,8 +32,8 @@
 }
 .introduce img {
     border-radius: 45px;
-    
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .skills, .tools, .projects {
@@ -67,4 +68,25 @@
 	background: black;
 	color: white;
 	margin-top: 1em;
+}
+
+@media all and (max-width: 768px) {
+    .introduce {
+        flex-direction: column;
+    }
+
+   .cards-holder {
+       grid-template-columns: repeat(3, 1fr);
+   }
+    
+    
+
+}
+
+@media all and (max-width: 500px) {
+    
+    .cards-holder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
