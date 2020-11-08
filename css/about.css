@@ -47,7 +47,7 @@ footer {
     height: auto;
     border-radius: 10%;
 }
-@media only screen and (max-width: 780px){
+@media all and (max-width: 780px){
 
     
     .section1, .section3, .section4{
