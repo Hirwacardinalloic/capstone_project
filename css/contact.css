@@ -1,0 +1,126 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "s s s s s s s s s s s s"
+                         "f f f f f f f f f f f f";
+}
+.header {
+    grid-area: h;
+}
+.section {
+
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 2em;
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    margin-bottom: 8%;
+    font-family: Courgette;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5em;
+    
+}
+
+.input {
+    width: 40em;
+    height: 3em;
+    padding: 1em;
+    margin: .5em;
+}
+.textarea {
+    width: 40em;
+    height: 15em;
+    padding: 1em;
+}
+
+.submit {
+    width: 40em;
+    height: 3em;
+    background: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.form input[type=submit]:hover {
+    cursor: pointer;
+}
+
+
+.footer {
+    grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background: black;
+	color: white;
+   
+}
+
+@media all and (max-width: 768px) {
+    .form {
+        margin-bottom: 6em;
+    }
+    .input {
+        width: 30em;
+        height: 2.5em;
+        padding: 1em;
+        margin: .5em;
+    }
+    .textarea {
+        width: 30em;
+        height: 15em;
+        padding: 1em;
+    }
+    
+    .submit {
+        width: 30em;
+        height: 2.5em;
+        background: green;
+        color: white;
+        border-radius: 10px;
+    }
+    
+}
+
+@media all and (max-width: 500px) {
+    .form {
+        margin-bottom: 11em;
+    }
+    .input {
+        width: 20em;
+        height: 2.5em;
+        padding: 1em;
+        margin: .5em;
+    }
+    .textarea {
+        width: 20em;
+        height: 10em;
+        padding: 1em;
+    }
+    
+    .submit {
+        width: 20em;
+        height: 2.5em;
+        background: green;
+        color: white;
+    }
+    
+}
+
