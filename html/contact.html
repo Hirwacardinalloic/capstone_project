@@ -9,77 +9,89 @@
         <link rel="stylesheet" href="../css/contact.css">
     </head>
     <body>
-        <nav>
+        <div>
+            <div class="header">
+                <nav>
     	
-    		<a class="logo"><img src="../img/logo.jpg"></a>
-    	
-    	<ul class="menu">
+                    <a class="logo"><img src="../img/logo.jpg"></a>
                 
-                <li class="item"><a id="home" href="../index.html">Home</a></li>
-                <li class="item"><a id="about" href="about.html">About</a></li>
-                <li class="item"><a id="blog" href="blog.html">Blog</a></li>
-                <li class="item"><a id="contact" href="#">Contact</a></li>
-                <li class="item button"><a id="signIn" href="sign.html">sign-in</a></li>
+                <ul class="menu">
+                        
+                        <li class="item"><a id="home" href="../index.html">Home</a></li>
+                        <li class="item"><a id="about" href="about.html">About</a></li>
+                        <li class="item"><a id="blog" href="blog.html">Blog</a></li>
+                        <li class="item"><a id="contact" href="#">Contact</a></li>
+                        <li class="item button"><a id="signIn" href="sign.html">sign-in</a></li>
+                        
+                 </ul>
                 
-         </ul>
-        
-        <div class="social-nav">
-           <ul>
-                <li><a href="#"><img src="../img/fb.png"></a></li>
-                <li><a href="#"><img src="../img/tweeter.png"></a></li>
-                <li><a href="#"><img src="../img/in.png"></a></li>
-                <li></li>
-           </ul>
-       </div>
-         <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
-        
-    </nav>
-    <hr>
-        <div class="form">
-            <form id="contact-us-form">
-                <h1>Contact us</h1>
-                <div>
-                    <input type="text" name="fullName" placeholder="Full name">
-                </div>
-                <div>
-                    <input type="email" name="emailAddress" placeholder="email address">
-                </div>
-                <div>
-                    <textarea name="messageArea" placeholder="Write your message here"></textarea>
-                </div>
-                <input class="submit" type="submit" name="send" value="send">
+                <div class="social-nav">
+                   <ul>
+                        <li><a href="#"><img src="../img/fb.png"></a></li>
+                        <li><a href="#"><img src="../img/tweeter.png"></a></li>
+                        <li><a href="#"><img src="../img/in.png"></a></li>
+                        <li></li>
+                   </ul>
+               </div>
+                 <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
                 
-            </form>
+            </nav>
+            </div>
+        <hr>
+            <div class="section">
+                
+                    <form class="form" id="contact-us-form">
+                        <h1>Contact us</h1>
+                        <div>
+                            <input class="input" type="text" name="fullName" placeholder="Full name">
+                        </div>
+                        <div>
+                            <input class="input" type="email" name="emailAddress" placeholder="email address">
+                        </div>
+                        <div>
+                            <textarea class="textarea" name="messageArea" placeholder="Write your message here"></textarea>
+                        </div>
+                        <input class="submit" type="submit" name="send" value="send">
+                        
+                    </form>
+            </div>
+           
+            <div class="footer">
+                <footer> 
+                    <small>&copy; Copyright 2020, Loic</small> 
+                </footer>
+            </div>
+
         </div>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyDwlNtfOWclDNGrI6frzHXKPiipcAxaQWs",
-    authDomain: "capstone-de6be.firebaseapp.com",
-    databaseURL: "https://capstone-de6be.firebaseio.com",
-    projectId: "capstone-de6be",
-    storageBucket: "capstone-de6be.appspot.com",
-    messagingSenderId: "806697156125",
-    appId: "1:806697156125:web:d089c08590d38b63cf50f4",
-    measurementId: "G-RV43JP4SCG"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const db = firebase.firestore();
-  db.settings({ timestampsInSnapshot: true });
-</script>
-        <script src="../js/nav.js"></script>
-        <script src="../js/app.js"></script>
-        <footer> <small>&copy; Copyright 2020, Loic</small> </footer>
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDwlNtfOWclDNGrI6frzHXKPiipcAxaQWs",
+        authDomain: "capstone-de6be.firebaseapp.com",
+        databaseURL: "https://capstone-de6be.firebaseio.com",
+        projectId: "capstone-de6be",
+        storageBucket: "capstone-de6be.appspot.com",
+        messagingSenderId: "806697156125",
+        appId: "1:806697156125:web:d089c08590d38b63cf50f4",
+        measurementId: "G-RV43JP4SCG"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshot: true });
+    </script>
+            <script src="../js/nav.js"></script>
+            <script src="../js/app.js"></script>
+        
     </body>
 </html>    
