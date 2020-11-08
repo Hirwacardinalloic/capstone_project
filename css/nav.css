@@ -7,7 +7,6 @@ body {
 	font-family: sans-serif;
 	font-size: 16px;
     max-width: 100%;
-
 }
 
 nav {
@@ -40,7 +39,6 @@ li a {
 	align-items: center;
 	order: 2;
 	width: 100%;
-	
 	color: white;
 }
 
