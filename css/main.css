@@ -20,7 +20,7 @@
     align-items: center;
     margin: 1em;
 }
-.introduce p {
+.hellodiv p {
     font-size: larger;
     font-weight: bolder;
 }
@@ -75,6 +75,25 @@
         flex-direction: column;
     }
 
+    .introduce img {
+        border-radius: 45px;
+        width: auto;
+        height: auto;
+    }
+    .hellodiv {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+     .hellodiv p {
+        font-size: medium;
+        font-weight: bold;
+     }
+
+    .introduce btn {
+        width: 100%;
+    }
+
    .cards-holder {
        grid-template-columns: repeat(3, 1fr);
    }
@@ -86,7 +105,7 @@
 @media all and (max-width: 500px) {
     
     .cards-holder {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
 }
