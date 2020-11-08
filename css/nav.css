@@ -46,6 +46,7 @@ li a {
 .menu li a {
 	display: block;
 	padding: 1em;
+	color: white;
 }
 .logo {
 	order: 1;

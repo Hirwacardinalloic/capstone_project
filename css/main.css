@@ -58,5 +58,13 @@
 }
 
 .footer {
-    grid-area: f;
+	grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background: black;
+	color: white;
+	margin-top: 1em;
 }
