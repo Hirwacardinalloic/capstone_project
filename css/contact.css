@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body {
+    background-color: #5cdb95;
+}
+ul {
+	list-style: none;
+}
+li a {
+	text-decoration: none;
+}
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#nav_items, #social_nav{
+	display: flex;
+	flex-direction: row;
+}
+li img {
+    width: 2.5em;
+    height: 2.5em;
+    display: block;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em 1em;
+}
+li a:hover {
+    color: blue;
+}
+.form {
+    width: 400px;
+    height: 420px;
+    color: #000;
+    margin-left: 30%;
+    padding: 1em;
+    box-sizing: border-box;
+    
+    
+}
+h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 22px;
+    color: teal;
+    text-align: center;
+    margin-bottom: 8%;
+    font-family: Courgette;
+}
+.form input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form input[type=text], .form input[type=email], textarea {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+    color: #ccc;
+}
+.form input[type=submit] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #f6648b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+
+
+}
+.form input[type=submit]:hover {
+    cursor: pointer;
+}
