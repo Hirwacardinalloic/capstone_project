@@ -1,8 +1,14 @@
 var docId = localStorage.getItem('article_id');
-const content1 = document.querySelector('.content1');
-//getting specific article
-db.collection('article').where('id', '==', docId).get().then( (snapshot)=> {
-    snapshot.docs.forEach(doc => {
-        content1.innerHTML = doc.data().content;
-    });
+var articleTitle = document.getElementById('articleTitle');
+var content = document.querySelector('.articleContent');
+//Reading a specific article
+db.collection('article').doc(docId).get().then((snapshot)=> {
+
+    articleTitle.innerHTML = snapshot.data().article_title;
+    content.innerHTML = snapshot.data().content;
+
 });
+    
+
+
+
