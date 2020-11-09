@@ -10,6 +10,16 @@
 	width: 100%;
 	transition: all .5s;
 }
+.main_content {
+	margin: 1em;
+}
+.main_content img {
+	width: 100%;
+	height: auto;
+	
+	margin-top: 1em;
+	margin-bottom: auto;
+}
 
 
 header {
@@ -44,6 +54,7 @@ header h1 {
 	padding: 10px 5px;
 	background: linear-gradient(45deg, rgba(21,82,153,1) 0%, rgba(144,192,229,.1) 100%);
 	transition: all .5s;
+	margin: 2px 1px 2px 1px;
 }
 .singleBlog:hover .blogContent {
 	bottom: 0;
