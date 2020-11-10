@@ -1,86 +1,126 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+.wrapper {
+    display: grid;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "s s s s s s s s s s s s"
+                         "f f f f f f f f f f f f";
 }
-body {
-    background-color: #5cdb95;
+.header {
+    grid-area: h;
 }
-ul {
-	list-style: none;
+.section {
+
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-li a {
-	text-decoration: none;
-}
-.navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-#nav_items, #social_nav{
-	display: flex;
-	flex-direction: row;
-}
-li img {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 1em;
-}
-li a:hover {
-    color: blue;
-}
-.form {
-    width: 400px;
-    height: 420px;
-    color: #000;
-    margin-left: 30%;
-    padding: 1em;
-    box-sizing: border-box;
-    
-    
-}
+
 h1 {
     padding: 0;
-    margin: 0;
+    margin: 2em;
     font-weight: bold;
     font-size: 22px;
-    color: teal;
+    color: black;
     text-align: center;
     margin-bottom: 8%;
     font-family: Courgette;
 }
-.form input, textarea {
-    width: 100%;
-    margin-bottom: 20px;
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5em;
+    
 }
-.form input[type=text], .form input[type=email], textarea {
-    border: none;
-    border-bottom: 1px solid #ddd;
-    background: transparent;
-    outline: none;
-    height: 30px;
-    font-size: 16px;
-    opacity: 1;
-    color: #ccc;
-}
-.form input[type=submit] {
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #f6648b;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
 
-
+.input {
+    width: 40em;
+    height: 3em;
+    padding: 1em;
+    margin: .5em;
 }
+.textarea {
+    width: 40em;
+    height: 15em;
+    padding: 1em;
+}
+
+.submit {
+    width: 40em;
+    height: 3em;
+    background: green;
+    color: white;
+    border-radius: 10px;
+}
+
 .form input[type=submit]:hover {
     cursor: pointer;
 }
+
+
+.footer {
+    grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background: black;
+	color: white;
+   
+}
+
+@media all and (max-width: 768px) {
+    .form {
+        margin-bottom: 6em;
+    }
+    .input {
+        width: 30em;
+        height: 2.5em;
+        padding: 1em;
+        margin: .5em;
+    }
+    .textarea {
+        width: 30em;
+        height: 15em;
+        padding: 1em;
+    }
+    
+    .submit {
+        width: 30em;
+        height: 2.5em;
+        background: green;
+        color: white;
+        border-radius: 10px;
+    }
+    
+}
+
+@media all and (max-width: 500px) {
+    .form {
+        margin-bottom: 11em;
+    }
+    .input {
+        width: 20em;
+        height: 2.5em;
+        padding: 1em;
+        margin: .5em;
+    }
+    .textarea {
+        width: 20em;
+        height: 10em;
+        padding: 1em;
+    }
+    
+    .submit {
+        width: 20em;
+        height: 2.5em;
+        background: green;
+        color: white;
+    }
+    
+}
+
