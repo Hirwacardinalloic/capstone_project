@@ -81,26 +81,13 @@ function renderContent(doc) {
         }
     }
 
-    document.querySelector('.btnUpdate').addEventListener('click', function(e){
-        //getting the updateform
-
-        var updateForm = document.querySelector('#updateForm');
-        var content = document.querySelector('.content').textContent();
-        alert(content);
-        e.stopPropagation();
-        db.collection('article').doc("'"+doc.id+"'").update({
-            article_title: updateForm.articleTitle.value,
-            content: updateForm.content.value,
-            publishDate: updateForm.publicationDate.value
-        });
-    });
-
+    
 
 
 }
 
 //getting data from firebase
-db.collection('article').orderBy('publishDate').onSnapshot(snapshot=>{
+db.collection('article').onSnapshot(snapshot=>{
     let changes = snapshot.docChanges();
     changes.forEach(change=>{
         if(change.type == 'added'){
@@ -109,5 +96,23 @@ db.collection('article').orderBy('publishDate').onSnapshot(snapshot=>{
     });
 });
 
+//data updating 
+
+document.querySelector('.btnUpdate').addEventListener('click',function(){
+    updateArticle();
+});
+
+function updateArticle() {
+    var articleId = document.querySelector('.edit').getAttribute('id');
+    var title = document.getElementById('articleTitle').value;
+    var content = document.getElementById('articleContent').value;
+    var date = document.getElementById('publicationDate').value;
+    db.collection('article').doc("'"+articleId+"'").update({
+        article_title: title,
+        content: content
+        
+    });
+    alert('Update successfull');
+}
 
 
