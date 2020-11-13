@@ -11,7 +11,7 @@ function renderContent(doc) {
     h3.innerHTML = doc.data().article_title;
     let p =document.createElement('p');
     let pdate = document.createElement('a');
-    pdate.innerHTML = "publication date";
+    pdate.innerHTML = doc.data().publishDate;
     let buttonsDiv = document.createElement('div');
     buttonsDiv.setAttribute('class', 'buttons');
     buttonsDiv.setAttribute('id', doc.id);
@@ -58,8 +58,10 @@ function renderContent(doc) {
     //filling the form modal with data
     var articleTitleId = document.querySelector('#articleTitle');
     var articleContent = document.querySelector('#articleContent');
+    var publicationDate = document.querySelector('#publicationDate');
     articleTitleId.value = doc.data().article_title;
     articleContent.innerHTML = doc.data().content;
+    publicationDate.value = doc.data().publishDate;
    
     editBtn.addEventListener('click', function(){
         modal.style.display = "block";
@@ -79,11 +81,26 @@ function renderContent(doc) {
         }
     }
 
+    document.querySelector('.btnUpdate').addEventListener('click', function(e){
+        //getting the updateform
+
+        var updateForm = document.querySelector('#updateForm');
+        var content = document.querySelector('.content').textContent();
+        alert(content);
+        e.stopPropagation();
+        db.collection('article').doc("'"+doc.id+"'").update({
+            article_title: updateForm.articleTitle.value,
+            content: updateForm.content.value,
+            publishDate: updateForm.publicationDate.value
+        });
+    });
+
+
 
 }
 
 //getting data from firebase
-db.collection('article').onSnapshot(snapshot=>{
+db.collection('article').orderBy('publishDate').onSnapshot(snapshot=>{
     let changes = snapshot.docChanges();
     changes.forEach(change=>{
         if(change.type == 'added'){
