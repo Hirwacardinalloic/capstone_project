@@ -31,25 +31,30 @@
                 <div class="form-group">
                          
                     <label  for="articleTitle">Title</label><br>
-                    <input type="text" id="articleTitle" class="form-control" name="articleTitle" placeholder="Title"> 
+                    <input type="text" id="articleTitle" class="form-control" name="articleTitle" placeholder="Title" required> 
                 </div>
                 <div class="form-group">
                          
                     <label  for="publicdate">Date</label><br>
-                    <input type="date" id="publicdate" class="form-control" name="publicdate"> 
+                    <input type="date" id="publicdate" class="form-control" name="publicdate" required>  
                 </div>
                 <div class="form-group">
                     <label for="content">The article content</label><br>
-                    <textarea name="content" id="content" placeholder="Content"></textarea>
+                    <textarea name="content" id="content" placeholder="Content" required></textarea>
                 </div>
                 <div>
                     <input type="file" id="image" accept="image/*"><span id="uploadProgress"></span>
                 </div>
                 <div>
-                    <button class="upload" id="uploadbtn">Upload a picture</button>
+                    <img src='' id="imagePreview">
+                    
+                </div>
+                <div>
+                   
+                   <input id="addArticlebtn" class="submit" type="submit" name="send" value="Add article">
                 </div>
                
-                <input class="submit" type="submit" name="send" value="Send">
+                
             </form>
         </div>
         <section class="footer">
