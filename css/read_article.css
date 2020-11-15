@@ -28,6 +28,17 @@ ul li a {
 	grid-area: s;
 	margin: 1em 0 1em 1em;
 }
+.comments h2 {
+	margin: 1em;
+}
+.CommentsArea {
+	margin: 2em;
+}
+.A_comment {
+	margin-bottom: 1em;
+	border-bottom: 0.5px solid black;
+	width: 90%;
+}
 .input {
 	margin: 1em;
 }
@@ -38,13 +49,15 @@ ul li a {
 
 }
 
-#comment {
+#yourComment {
 	max-width: 90%;
+	min-width: 90%;
 	width: 90%;
 	height: 8em;
 	padding: 1em;
 	margin-left: 1em;
 }
+
 #submitComment {
 	width: 90%;
 	height: auto;
