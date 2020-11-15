@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hirwa Loic</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/sign.css">
+    </head>
+    <body>
+        <div>
+            <div class="header">
+                <nav>
+    	
+                    <a class="logo"><img src="../img/logo.jpg"></a>
+                
+                <ul class="menu">
+                        
+                        <li class="item"><a id="home" href="../index.html">Home</a></li>
+                        <li class="item"><a id="about" href="about.html">About</a></li>
+                        <li class="item"><a id="blog" href="blog.html">Blog</a></li>
+                        <li class="item"><a id="contact" href="#">Contact</a></li>
+                        <li class="item button"><a id="signIn" href="sign.html">sign-in</a></li>
+                        
+                 </ul>
+                
+                <div class="social-nav">
+                   <ul>
+                        <li><a href="#"><img src="../img/fb.png"></a></li>
+                        <li><a href="#"><img src="../img/tweeter.png"></a></li>
+                        <li><a href="#"><img src="../img/in.png"></a></li>
+                        <li></li>
+                   </ul>
+               </div>
+                 <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
+                
+            </nav>
+            </div>
+        <hr>
+            <div class="section">
+                
+                    <form class="form" id="signup-form">
+                        <h1>Sign in</h1>
+                        <div>
+                            <input id="signup_email" class="input" type="email" name="email" placeholder=" email" required>
+                        </div>
+                        <div>
+                            <input id="signup_password" class="input" type="password" name="password" required>
+                        </div>
+                        
+                        <input class="submit" type="submit" name="send" value="Sign up">
+                        
+                    </form>
+            </div>
+           
+            <div class="footer">
+                <footer> 
+                    <small>&copy; Copyright 2020, Loic</small> 
+                </footer>
+            </div>
+
+        </div>
+         
+        
+    </body>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDwlNtfOWclDNGrI6frzHXKPiipcAxaQWs",
+    authDomain: "capstone-de6be.firebaseapp.com",
+    databaseURL: "https://capstone-de6be.firebaseio.com",
+    projectId: "capstone-de6be",
+    storageBucket: "capstone-de6be.appspot.com",
+    messagingSenderId: "806697156125",
+    appId: "1:806697156125:web:d089c08590d38b63cf50f4",
+    measurementId: "G-RV43JP4SCG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+</script>
+<script src="../js/auth.js"></script>
+</html>    
