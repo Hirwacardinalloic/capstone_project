@@ -38,11 +38,16 @@ header h1 {
 .singleBlog {
 	
 	overflow: hidden;
-	/*max-height: 580px;
-	height: 100%;*/
+	max-height: 350px;
+	height: 350px;
+	margin-left: 5px;
 	box-sizing: border-box;
 	box-shadow: 0 2px 10px #ccc;
 	transition: all .5s;
+}
+.singleBlog img {
+	max-height: 200x;
+	height: 200px;
 }
 .blogContent {
 
