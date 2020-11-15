@@ -34,7 +34,7 @@ function addArticle(title,publicDate,content) {
         uploadTask.on('state_changed', function(snapshot){
             //getting task progress
             var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-            document.getElementById('uploadProgress').innerHTML = "The upload is "+progress+"% successful";
+            document.getElementById('uploadProgress').innerHTML ="Article added successfully";
     
         },function(error){
             //error hangling
@@ -43,7 +43,6 @@ function addArticle(title,publicDate,content) {
             //handling successful upload
             
             uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-                alert(downloadURL);
                 db.collection('article').add({
                     article_title: title,
                     publishDate: publicDate,
@@ -54,6 +53,8 @@ function addArticle(title,publicDate,content) {
                
             });
         });
+        document.getElementById('uploadProgress').innerHTML ="";
+        document.getElementById('article_form').reset();
     }else {
         alert("Choose an image please");
     }
