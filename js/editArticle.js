@@ -60,7 +60,11 @@ function renderContent(doc) {
         
         loadUnpublishedArticles();
     });
-
+    //Persing the article id to the update page
+    editBtn.addEventListener('click', function() {
+        localStorage.setItem('docIdUpdate', $(this).attr('id'));
+        location.assign('updateArticle.html');
+    });
    
  
   

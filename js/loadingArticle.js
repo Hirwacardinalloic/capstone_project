@@ -1,4 +1,5 @@
 var docId = localStorage.getItem('article_id');
+localStorage.setItem('article_id', "");
 var articleTitle = document.getElementById('articleTitle');
 var content = document.querySelector('.articleContent');
 var contentImage = document.getElementById('content_image');

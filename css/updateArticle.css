@@ -30,22 +30,32 @@ h1 {
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     margin-bottom: 13em;
     margin-top: 5em;
     
+}
+#image {
+    margin-bottom: 1em;
 }
 
 .input {
     width: 40em;
     height: 3em;
     padding: 1em;
-    margin: .5em;
+    margin-bottom: 1em;
+}
+.published {
+    margin-left: 3em;
+}
+.not_published {
+    margin-left: 1em;
 }
 .textarea {
+    max-width: 40em;
     width: 40em;
     height: 15em;
+    min-height: 15em;
     padding: 1em;
 }
 
@@ -79,13 +89,13 @@ h1 {
     .input {
         width: 30em;
         height: 2.5em;
-        padding: 1em;
-        margin: .5em;
+       
+       
     }
     .textarea {
         width: 30em;
         height: 15em;
-        padding: 1em;
+        
     }
     
     .submit {
@@ -106,12 +116,12 @@ h1 {
         width: 20em;
         height: 2.5em;
         padding: 1em;
-        margin: .5em;
+        
     }
     .textarea {
         width: 20em;
         height: 10em;
-        padding: 1em;
+        
     }
     
     .submit {
