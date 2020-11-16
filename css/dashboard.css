@@ -50,3 +50,6 @@ li :hover {
     background-color: red;
     color: whitesmoke;
 }
+#feedback-list li span {
+    padding: 1em;
+}
