@@ -1,0 +1,111 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "i i i i i i i i i i i i"
+                         "s s s s s s s s s s s s"
+                         "t t t t t t t t t t t t"
+                         "p p p p p p p p p p p p"
+                         "f f f f f f f f f f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.introduce {
+    grid-area: i;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+}
+.hellodiv p {
+    font-size: larger;
+    font-weight: bolder;
+}
+.introduce button {
+    width: 45%;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+.introduce img {
+    border-radius: 45px;
+    width: auto;
+    height: auto;
+}
+
+.skills, .tools, .projects {
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1em;
+}
+
+.cards-holder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tools {
+    grid-area: t;
+}
+
+.projects {
+    grid-area: p;
+}
+
+.footer {
+	grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background: black;
+	color: white;
+	margin-top: 1em;
+}
+
+@media all and (max-width: 768px) {
+    .introduce {
+        flex-direction: column;
+    }
+
+    .introduce img {
+        border-radius: 45px;
+        width: auto;
+        height: auto;
+    }
+    .hellodiv {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+     .hellodiv p {
+        font-size: medium;
+        font-weight: bold;
+     }
+
+    .introduce btn {
+        width: 100%;
+    }
+
+   .cards-holder {
+       grid-template-columns: repeat(3, 1fr);
+   }
+    
+    
+
+}
+
+@media all and (max-width: 500px) {
+    
+    .cards-holder {
+        grid-template-columns: 1fr;
+    }
+
+}
