@@ -34,9 +34,18 @@ ul li a {
 .textfield {
 	width: 46%;
 	height: 2em;
-	padding: 1em;
+	/* padding: 1em; */
 
 }
+
+#yourComment {
+	max-width: 90%;
+	min-width: 90%;
+	width: 90%;
+	margin-left: 1em;
+	min-height: 10em;
+}
+
 
 #comment {
 	max-width: 90%;

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hirwa Loic</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/nav.css">
+        <link rel="stylesheet" type="text/css" href="/css/card.css">
+        <link rel="stylesheet" href="/css/read_article.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <nav>
+        
+            <a class="logo"><img src="/img/logo.jpg"></a>
+        
+           <ul class="menu">
+                
+                <li class="item"><a id="home" href="/index.html">Home</a></li>
+                <li class="item"><a id="about" href="about.html">About</a></li>
+                <li class="item"><a id="blog" href="blog.html">Blog</a></li>
+                <li class="item"><a id="contact" href="contact.html">Contact</a></li>
+                <li class="item button"><a id="signIn" href="sign.html">sign-in</a></li>
+                
+         </ul>
+        
+        <div class="social-nav">
+           <ul>
+                <li><a href="#"><img src="/img/fb.png"></a></li>
+                <li><a href="#"><img src="/img/tweeter.png"></a></li>
+                <li><a href="#"><img src="/img/in.png"></a></li>
+                <li></li>
+           </ul>
+       </div>
+         <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
+       
+    </nav>
+    <hr>
+                
+            </div>
+            
+            <div class="side-menu">
+               <header>
+                <center><h1>Latest news</h1></center>
+              </header>
+              <div class="cards-holder">
+                  <div class="singleBlog">
+                    <img src="/img/vin.jpg">
+                    <div class="blogContent">
+                        <h3>A chair of million Art</spn></h3>
+                        <p>By <a href="#">John Doe</a> | <a href="#">Nov 4, 2020</a></p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+                <div class="singleBlog">
+                    <img src="/img/messi.jpg">
+                    <div class="blogContent">
+                        <h3>A chair of million <spn>Art</spn></h3>
+                        <p>By <a href="#">John Doe</a> | <a href="#">Nov 4, 2020</a></p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+                <div class="singleBlog">
+                    <img src="/img/uefa.jpg">
+                    <div class="blogContent">
+                        <h3>A chair of million <spn>Art</spn></h3>
+                        <p>By <a href="#">John Doe</a> | <a href="#">Nov 4, 2020</a></p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+              </div>
+                
+
+                
+            </div>
+            <section class="content">
+                <h1 id="articleTitle"><%= articleContent.articleTitle; %></h1>
+                <img id="content_image" src="/img/uefa.jpg">
+               
+                  
+                    <p class="articleContent"><%= articleContent.content; %></p>  
+                
+               
+               
+              
+               
+                
+                
+            </section>
+            <div class="comments">
+                <form id="commentForm">
+                    <div class="input">
+                        <input id="yourName" class="textfield" type="text" required name="yourName" placeholder="Type your name">
+                        <input id="yourEmail" class="textfield" type="email" required name="yourEmail" placeholder="example@gmail.com">
+                    </div>
+                    <div>
+                        <textarea name="comment" id="yourComment" cols="30" rows="10" required></textarea>
+                    </div>
+                    <input id="submitComment" type="submit" name="submitComment" value="Send" required>
+                </form>
+                <h2>Comments Section</h2>
+                <section class="CommentsArea">
+                    
+
+                </section>
+            </div>
+            <div class="footer">
+                <footer> 
+                    <small>&copy; Copyright 2020, Loic</small> 
+                </footer>
+            </div>
+        </div>
+     
+
+
+        <script src="/js/nav.js"></script>
+       
+    </body>
+</html>
