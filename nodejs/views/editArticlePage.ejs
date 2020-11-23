@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hirwa Loic</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/nav.css">
+        <link rel="stylesheet" type="text/css" href="/css/card.css">
+        <link rel="stylesheet" href="/css/editArticle.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <nav>
+        
+                    <a class="logo"><img src="/img/logo.jpg"></a>
+                    
+                    <ul class="menu">
+                            
+                            
+                            <li class="item"><a id="about" href="#">dashboard</a></li>
+                            <li class="item button"><a id="signIn" href="#">sign-out</a></li>
+                            
+                    </ul>
+        
+                    
+                    <div class="toggleDiv"><a class="toggle" href="#"><i class="fa fa-bars"></i></a></div>
+                
+                </nav>
+                <hr>
+                
+            </div>
+        </div>
+        <section class="content">
+            <% for(i=0;i<articles.length;i++){ %>
+                <div class="singleBlog">
+                    <img src=''>
+                    <div class="blogContent">
+                        <h3><%=articles[i].articleTitle%></h3>
+                        <p>
+                            <a><%=articles[i].date%></a>
+                        </p>
+                        <div class="buttons">
+                            <a href="/addArticle/edit">Edit</a>
+                            <form class="deleteForm" method="POST" action="/editArticle/<%=articles[i]._id%>?_method=DELETE">
+                                <button type="submit">Delete</button>
+                            </form>
+                            <a href="/addArticle/?idPub=<%=articles[i]._id%>">Publish</a>
+                        </div>
+                    </div>
+
+                </div>
+            <% } %>
+            
+        </section>
+        <section class="footer">
+            <footer> 
+                <small>&copy; Copyright 2020, Loic</small> 
+            </footer>
+        </section>
+       
+    </body>
+</html>
