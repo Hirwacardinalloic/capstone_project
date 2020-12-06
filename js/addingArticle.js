@@ -30,19 +30,9 @@ function renderContent(doc) {
 }
 
 //getting documents from firebase
-// db.collection('article').get().then( (snapshot) => {
-//     snapshot.docs.forEach(doc => {
-//         renderContent(doc);
-//     });
-// });
-
-//real time listener
-db.collection('article').onSnapshot(snapshot => {
-    let changes = snapshot.docChanges();
-    changes.forEach(change => {
-        if(change.type == 'added'){
-            renderContent(change.doc);
-        }
+db.collection('article').where('status', '==', 'published').get().then( (snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderContent(doc);
     });
 });
 

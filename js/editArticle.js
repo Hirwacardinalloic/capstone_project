@@ -15,7 +15,7 @@ function renderContent(doc) {
     h3.innerHTML = doc.data().article_title;
     let p =document.createElement('p');
     let pdate = document.createElement('a');
-    pdate.innerHTML = "publication date";
+    pdate.innerHTML = doc.data().publishDate;
     let buttonsDiv = document.createElement('div');
     buttonsDiv.setAttribute('class', 'buttons');
     buttonsDiv.setAttribute('id', doc.id);
@@ -65,10 +65,7 @@ function renderContent(doc) {
         localStorage.setItem('docIdUpdate', $(this).attr('id'));
         location.assign('updateArticle.html');
     });
-   
- 
-  
-  
+
 
 
 }
@@ -89,10 +86,10 @@ $('.btnUpdate').click(function(e) {
 });
 
 
-
 document.querySelector('.publish').addEventListener('click', function(e){
     e.preventDefault();
     alert();
 });
 
 });
+
