@@ -65,12 +65,7 @@ function renderContent(doc) {
         localStorage.setItem('docIdUpdate', $(this).attr('id'));
         location.assign('updateArticle.html');
     });
-   
- 
-  
-  
 
-    
 
 
 }
@@ -90,4 +85,11 @@ $('.btnUpdate').click(function(e) {
     alert('Hello');
 });
 
+
+document.querySelector('.publish').addEventListener('click', function(e){
+    e.preventDefault();
+    alert();
 });
+
+});
+
