@@ -1,9 +1,11 @@
 //Listen for authentication status
 
 auth.onAuthStateChanged(user => {
-    if(user)
+     if(user) {
         localStorage.setItem('token', user.uid);
-    localStorage.removeItem('token');
+        location.assign('dashboard.html');
+     }
+        
 });
 
 // const signupForm = document.getElementById('signup-form');

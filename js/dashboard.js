@@ -34,7 +34,8 @@ const signOutBtn = document.querySelector('.sign-out');
 signOutBtn.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
-        console.log("user signed out");
+        localStorage.removeItem('token');
+        location.reload();
     });
 });
 
