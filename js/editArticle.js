@@ -94,3 +94,7 @@ db.collection('article').onSnapshot(snapshot=>{
 
 
 
+document.querySelector('.publish').addEventListener('click', function(e){
+    e.preventDefault();
+    alert();
+});
