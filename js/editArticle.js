@@ -1,4 +1,8 @@
-const content = document.querySelector('.content');
+
+
+$(document).ready(function(){
+    
+    const content = document.querySelector('.content');
 
 function renderContent(doc) {
     let singleBlog = document.createElement('div');
@@ -47,49 +51,41 @@ function renderContent(doc) {
         db.collection('article').doc(dataId).delete();
     });
 
-     //Modal opening
-     
-    var modal = document.getElementById("myModal");
-
-  
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    //filling the form modal with data
-    var articleTitleId = document.querySelector('#articleTitle');
-    var articleContent = document.querySelector('#articleContent');
-    articleTitleId.value = doc.data().article_title;
-    articleContent.innerHTML = doc.data().content;
-   
-    editBtn.addEventListener('click', function(){
-        modal.style.display = "block";
+    //publishing an article
+    publishBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        db.collection('article').doc($(this).attr('id')).update({
+            status: 'published'
+        });
+        
+        loadUnpublishedArticles();
     });
-    // When the user clicks on <span> (x), close the modal
-//     span.onclick = function() {
-//     modal.style.display = "none";
-//   }
-     span.addEventListener('click', function(){
-        modal.style.display = "none";
-     });
+    //Persing the article id to the update page
+    editBtn.addEventListener('click', function() {
+        localStorage.setItem('docIdUpdate', $(this).attr('id'));
+        location.assign('updateArticle.html');
+    });
+   
+ 
   
-  // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-        modal.style.display = "none";
-        }
-    }
+  
 
 
 }
 
 //getting data from firebase
-db.collection('article').onSnapshot(snapshot=>{
-    let changes = snapshot.docChanges();
-    changes.forEach(change=>{
-        if(change.type == 'added'){
-            renderContent(change.doc);
-        }
+function loadUnpublishedArticles() {
+    
+    db.collection('article').where('status', '==', 'not_published').get().then((snapshot)=>{
+        snapshot.docs.forEach(doc=>{
+            renderContent(doc);
+        });
     });
+}
+loadUnpublishedArticles();
+$('.btnUpdate').click(function(e) {
+    e.preventDefault();
+    alert('Hello');
 });
 
 
@@ -97,4 +93,6 @@ db.collection('article').onSnapshot(snapshot=>{
 document.querySelector('.publish').addEventListener('click', function(e){
     e.preventDefault();
     alert();
+});
+
 });
