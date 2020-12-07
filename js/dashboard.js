@@ -21,14 +21,22 @@ function renderFeedback(doc) {
 }
 
 //Getting feedback data from firebase
-feedbackButton.addEventListener('click', (e) => {
+// feedbackButton.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     db.collection('feedback').get().then((snapshot) =>{
+//         snapshot.docs.forEach(doc =>{
+//             renderFeedback(doc);
+//         });
+//     });
+// });
+//signing out
+const signOutBtn = document.querySelector('.sign-out');
+signOutBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    db.collection('feedback').get().then((snapshot) =>{
-        snapshot.docs.forEach(doc =>{
-            renderFeedback(doc);
-        });
+    auth.signOut().then(() => {
+        localStorage.removeItem('token');
+        location.reload();
     });
 });
-//Loading the article form
 
 
