@@ -1,10 +1,11 @@
 //Listen for authentication status
+
 auth.onAuthStateChanged(user => {
-    if(user){
-        console.log("user logged in",user);
-    }else {
-        console.log("user logged out");
-    }
+     if(user) {
+        localStorage.setItem('token', user.uid);
+        location.assign('dashboard.html');
+     }
+        
 });
 
 // const signupForm = document.getElementById('signup-form');
@@ -22,14 +23,14 @@ auth.onAuthStateChanged(user => {
 //     });
     
 // });
-// //sign out 
-// // const signOutBtn = document.getElementById('sign-out');
-// // signOutBtn.addEventListener('click', (e) => {
-// //     e.preventDefault();
-// //     auth.signOut().then(() => {
-// //         console.log("user signed out");
-// //     });
-// // });
+//sign out 
+// const signOutBtn = document.querySelector('.sign-out');
+// signOutBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     auth.signOut().then(() => {
+//         console.log("user signed out");
+//     });
+// });
 
 //Sign in
 document.getElementById('signin-form').addEventListener('submit', (e) =>{
