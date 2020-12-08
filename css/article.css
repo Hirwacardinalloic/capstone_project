@@ -9,7 +9,7 @@
     margin-bottom: 7%;
 }
 .content h1 {
-    margin-top: 5%;
+    margin-top: 1em;
     font-size: 2em;
     font-weight: bolder;
 }
@@ -22,23 +22,26 @@
     width: 30em;
     height: 2em;
 }
-.form-group textarea {
+#content {
     max-width: 30em;
     width: 30em;
     height: 15em;
 
 }
-.upload, .submit {
-    font-size: 1.5em;
-    font-weight: bold;
+.submit {
+
+    max-width: 30em;
+    width: 27em;
+    color: white;
+    background: green;
+    height: 2em;
+    font-size: 15px;
     
 }
 .upload {
     float: left;
 }
-.submit {
-    float: right;
-}
+
 .footer {
 	/* grid-area: f; */
 	display: flex;
@@ -49,4 +52,12 @@
 	background: black;
 	color: white;
 	margin-top: 1em;
+}
+#imagePreview {
+    max-width: 25em;
+    width: 25em;
+    height: 25em;
+    border: 2px solid black;
+    margin-top: 1em;
+    display: none;
 }
