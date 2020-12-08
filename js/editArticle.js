@@ -92,9 +92,9 @@ $('.btnUpdate').click(function(e) {
 
 //data updating 
 
-document.querySelector('.btnUpdate').addEventListener('click',function(){
-    updateArticle();
-});
+// document.querySelector('.btnUpdate').addEventListener('click',function(){
+//     updateArticle();
+// });
 
 function updateArticle() {
     var articleId = document.querySelector('.edit').getAttribute('id');
