@@ -15,7 +15,7 @@ function renderContent(doc) {
     h3.innerHTML = doc.data().article_title;
     let p =document.createElement('p');
     let pdate = document.createElement('a');
-    pdate.innerHTML = "publication date";
+    pdate.innerHTML = doc.data().publishDate;
     let buttonsDiv = document.createElement('div');
     buttonsDiv.setAttribute('class', 'buttons');
     buttonsDiv.setAttribute('id', doc.id);
@@ -70,6 +70,8 @@ function renderContent(doc) {
   
   
 
+    
+
 
 }
 
@@ -88,6 +90,24 @@ $('.btnUpdate').click(function(e) {
     alert('Hello');
 });
 
+//data updating 
+
+document.querySelector('.btnUpdate').addEventListener('click',function(){
+    updateArticle();
+});
+
+function updateArticle() {
+    var articleId = document.querySelector('.edit').getAttribute('id');
+    var title = document.getElementById('articleTitle').value;
+    var content = document.getElementById('articleContent').value;
+    var date = document.getElementById('publicationDate').value;
+    db.collection('article').doc("'"+articleId+"'").update({
+        article_title: title,
+        content: content
+        
+    });
+    alert('Update successfull');
+}
 
 
 document.querySelector('.publish').addEventListener('click', function(e){
