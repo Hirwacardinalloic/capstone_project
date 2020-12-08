@@ -43,16 +43,19 @@ function addArticle(title,publicDate,content) {
             //handling successful upload
             
             uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-                alert(downloadURL);
                 db.collection('article').add({
                     article_title: title,
                     publishDate: publicDate,
                     content: content,
                     image: downloadURL,
                     status: 'not_published'
+                }).then(()=>{
+                    alert("article successfully saved");
+                    location.assign('editArticlePage.html');
                 });
                
             });
+
         });
     }else {
         alert("Choose an image please");

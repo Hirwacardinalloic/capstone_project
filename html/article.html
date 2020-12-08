@@ -4,6 +4,7 @@
         <title>Loic || Article</title>
         <link rel="stylesheet" type="text/css" href="../css/nav.css">
         <link rel="stylesheet" href="../css/article.css">
+        <script src="../js/checkAuth.js"></script>
     </head>
     <body>
         <div class="header">
@@ -15,7 +16,7 @@
                         
                         
                         <li class="item"><a id="about" href="#">dashboard</a></li>
-                        <li class="item button"><a id="signIn" href="#">sign-out</a></li>
+                        <li><a class="sign-out" href="#">Sign out</a></li>
                         
                 </ul>
     
@@ -62,33 +63,19 @@
                 <small>&copy; Copyright 2020, Loic</small> 
             </footer>
         </section>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyDwlNtfOWclDNGrI6frzHXKPiipcAxaQWs",
-    authDomain: "capstone-de6be.firebaseapp.com",
-    databaseURL: "https://capstone-de6be.firebaseio.com",
-    projectId: "capstone-de6be",
-    storageBucket: "capstone-de6be.appspot.com",
-    messagingSenderId: "806697156125",
-    appId: "1:806697156125:web:d089c08590d38b63cf50f4",
-    measurementId: "G-RV43JP4SCG"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const db = firebase.firestore();
-  db.settings({ timestampsInSnapshots: true });
-</script>
+     
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+   
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+   
+   <script src="../js/firebaseConfig.js"></script>
+    <script src="../js/signOut.js"></script>
 <script src="../js/article.js"></script>
 
   <script
